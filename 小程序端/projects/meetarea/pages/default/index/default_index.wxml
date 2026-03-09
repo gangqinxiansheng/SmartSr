@@ -1,0 +1,76 @@
+<view class="main">
+	<view class="up">
+		<image mode="aspectFill" src="../../../images/home.jpg" />
+	</view>
+	<view class="down">
+		<view class="menu card-project">
+			<view wx:for="{{newsCateList}}" wx:key="key" bindtap="url"   data-url="../../news/index/news_index?id={{item.id}}" class="item">
+				<view class="item-inner">
+					<view class="img">
+                        <image src="../../../images/home/n{{item.id}}.png" />
+					</view>
+					<view class="title">{{item.title}}</view>
+				</view>
+			</view>   
+ 
+
+		</view>
+
+
+		<!--guide begin -->
+		<view class="guide">
+			<!--<view class="title"> </view>-->
+			<view class="item">
+				<view class="left" bindtap="url"   data-url="../../meet/index/meet_index?id=1">
+					<image src="../../../images/home/1.png"   mode="aspectFill" lazy-load="{{true}}" />
+					<view class="line1">邻里活动</view>
+					<view class="line2"> </view>
+					<view class="order text-orangen">马上报名</view>
+				</view>
+				<view class="right">
+					<view class="line" bindtap="url"  data-url="../../meet/index/meet_index?id=2">
+						<image src="../../../images/home/2.png"   mode="widthFix" lazy-load="{{true}}" />
+						<view class="txt1">公益活动</view>
+						<view class="txt2">传递善意微光 </view>
+					</view>
+					<view class="line" bindtap="url" data-url="../../meet/index/meet_index?id=3">
+						<image src="../../../images/home/3.png"   mode="widthFix" lazy-load="{{true}}" />
+						<view class="txt1">业主议事</view>
+						<view class="txt2">共商小区发展与未来</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!--guide END -->
+
+
+		<!-- List Begin -->
+		<view wx:if="{{!newsList}}" class="margin-top load loading text-l load-project"></view>
+		
+
+		<view wx:else class="down-list">
+
+            <view wx:if="{{newsList.length==0}}" class="margin-top text-center  loading text-l load-project">暂无记录</view>
+            
+			<view class="item shadow-project" wx:for="{{newsList}}" wx:key="k" bindtap="url" data-url="../../news/detail/news_detail?id={{item.newsId}}">
+				<view class="left">
+					<view class="line1 content-cut-two">{{item.newsTitle}}</view>
+					<view class="line2">
+						<text><text class="icon-moreandroid" style="color: #ddd;"></text>{{item.newsCateName}}</text>
+						<!--<text><text class="icon-attention margin-right-xxs"></text>{{item.cnt}}</text>-->
+					</view>
+				</view>
+				<view class="right">
+					<image lazy-load="{{true}}" mode="aspectFill" class="loading shadow" src="{{item.newsObj.cover[0]}}"  ></image>
+				</view>
+			</view>
+		</view>
+
+		<!-- List END -->
+	</view>
+</view>
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'default_index',returnHome:false}}" />
+</block>

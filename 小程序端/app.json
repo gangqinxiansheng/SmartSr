@@ -1,0 +1,111 @@
+{
+	"pages": [
+		"projects/meetarea/pages/default/index/default_index",
+		"projects/meetarea/pages/about/list/about_list",
+		"projects/meetarea/pages/about/index/about_index",
+		"projects/meetarea/pages/search/search",
+		"projects/meetarea/pages/my/index/my_index",
+		"projects/meetarea/pages/my/reg/my_reg",
+		"projects/meetarea/pages/my/edit/my_edit",
+		"projects/meetarea/pages/my/login/my_login",
+		"projects/meetarea/pages/my/pwd/my_pwd",
+		"projects/meetarea/pages/my/fav/my_fav",
+		"projects/meetarea/pages/my/foot/my_foot",
+		"projects/meetarea/pages/news/index/news_index",
+		"projects/meetarea/pages/news/detail/news_detail",
+		"projects/meetarea/pages/news/cate1/news_cate1",
+		"projects/meetarea/pages/news/cate2/news_cate2",
+		"projects/meetarea/pages/admin/news/list/admin_news_list",
+		"projects/meetarea/pages/admin/news/add/admin_news_add",
+		"projects/meetarea/pages/admin/news/edit/admin_news_edit",
+		"projects/meetarea/pages/admin/setup/about/admin_setup_about",
+		"projects/meetarea/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/meetarea/pages/admin/index/home/admin_home",
+		"projects/meetarea/pages/admin/index/login/admin_login",
+		"projects/meetarea/pages/admin/content/admin_content",
+		"projects/meetarea/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/meetarea/pages/admin/mgr/list/admin_mgr_list",
+		"projects/meetarea/pages/admin/mgr/add/admin_mgr_add",
+		"projects/meetarea/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/meetarea/pages/admin/user/list/admin_user_list",
+		"projects/meetarea/pages/admin/user/detail/admin_user_detail",
+		"projects/meetarea/pages/admin/user/export/admin_user_export",
+		"projects/meetarea/pages/meet/index/meet_index",
+		"projects/meetarea/pages/meet/detail/meet_detail",
+		"projects/meetarea/pages/meet/join/meet_join",
+		"projects/meetarea/pages/meet/my_join_list/meet_my_join_list",
+		"projects/meetarea/pages/meet/my_join_detail/meet_my_join_detail",
+		"projects/meetarea/pages/meet/calendar/meet_calendar",
+		"projects/meetarea/pages/meet/join_list/meet_join_list",
+		"projects/meetarea/pages/meet/cate/meet_cate",
+		"projects/meetarea/pages/admin/meet/join_list/admin_meet_join_list",
+		"projects/meetarea/pages/admin/meet/export/admin_meet_export",
+		"projects/meetarea/pages/admin/meet/scan/admin_meet_scan",
+		"projects/meetarea/pages/admin/meet/list/admin_meet_list",
+		"projects/meetarea/pages/admin/meet/add/admin_meet_add",
+		"projects/meetarea/pages/admin/meet/edit/admin_meet_edit",
+		"projects/meetarea/pages/admin/meet/day_set/admin_meet_day_set",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#D59E32",
+		"navigationBarTitleText": "居民小区小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#fefefe",
+		"color": "#999999",
+		"selectedColor": "#D59E32",
+		"list": [
+			{
+				"pagePath": "projects/meetarea/pages/default/index/default_index",
+				"text": "首页",
+				"iconPath": "/projects/meetarea/images/tabbar/home.png",
+				"selectedIconPath": "/projects/meetarea/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/meetarea/pages/news/cate1/news_cate1",
+				"text": "通知",
+				"iconPath": "/projects/meetarea/images/tabbar/cate1.png",
+				"selectedIconPath": "/projects/meetarea/images/tabbar/cate1_cur.png"
+			},
+			{
+				"pagePath": "projects/meetarea/pages/news/cate2/news_cate2",
+				"text": "小区规约",
+				"iconPath": "/projects/meetarea/images/tabbar/cate2.png",
+				"selectedIconPath": "/projects/meetarea/images/tabbar/cate2_cur.png"
+			},
+			{
+				"pagePath": "projects/meetarea/pages/meet/calendar/meet_calendar",
+				"text": "活动日历",
+				"iconPath": "/projects/meetarea/images/tabbar/ticket.png",
+				"selectedIconPath": "/projects/meetarea/images/tabbar/ticket_cur.png"
+			},
+			{
+				"pagePath": "projects/meetarea/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/meetarea/images/tabbar/my.png",
+				"selectedIconPath": "/projects/meetarea/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"requiredPrivateInfos": [
+		"chooseLocation"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}
